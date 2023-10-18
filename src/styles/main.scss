@@ -1,0 +1,19 @@
+@import "./vars.scss";
+
+@import "./components/board.scss";
+@import "./components/nav.scss";
+@import "./components/tile.scss";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: $breakpoint-tablet) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

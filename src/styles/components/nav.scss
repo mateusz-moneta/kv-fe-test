@@ -1,0 +1,55 @@
+nav {
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+        background-color: $black;
+        border-bottom-right-radius: 3.2rem;
+        border-top-right-radius: 3.2rem;
+        display: block;
+        max-width: 33.1rem;
+        padding: 2.5rem;
+    }
+
+    > button {
+        align-items: center;
+        background-color: $even;
+        border: none;
+        border-radius: 0.8rem;
+        color: $white;
+        display: flex;
+        font-size: 1.7rem;
+        height: 8rem;
+        outline: none;
+        width: 8rem;
+
+        &:not(:last-of-type) {
+            margin-right: 1.5rem;
+        }
+
+        > img {
+            filter: invert(1);
+            transform: scale(0.75);
+        }
+
+        > span {
+            display: none;
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            height: auto;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+
+            > span {
+                display: block;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

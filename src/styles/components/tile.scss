@@ -1,0 +1,60 @@
+@import "../vars.scss";
+
+.tile {
+    align-items: center;
+    border-radius: 0.8rem;
+    display: flex;
+    font-size: 2.4rem;
+    height: 5rem;
+    justify-content: center;
+    position: relative;
+    transition-duration: 2s;
+
+    @media (min-width: $breakpoint-tablet) {
+        color: $white;
+        height: 16rem;
+        width: 16rem;
+
+        > .decoration {
+            display: none;
+        }
+    }
+
+    > .decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 100%;
+    }
+}
+
+.even {
+    @media (max-width: $breakpoint-tablet) {
+        border: 0.2rem solid $even;
+        color: $even;
+
+        > .decoration {
+            background-color: $even;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        background-color: $even;
+    }
+}
+
+.odd {
+    @media (max-width: $breakpoint-tablet) {
+        border: 0.2rem solid $odd;
+        color: $odd;
+
+        > .decoration {
+            background-color: $odd;
+        }
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        background-color: $odd;
+    }
+}

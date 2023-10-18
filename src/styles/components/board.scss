@@ -1,0 +1,12 @@
+@import "../vars.scss";
+
+.board {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+  
+    @media (min-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(3, 16rem);
+      padding: 2.5rem;
+    }
+  }
